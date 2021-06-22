@@ -3,6 +3,7 @@ const userInput = document.querySelector('.input-todo input');
 const listTodo = document.querySelector('.list-todo');
 
 
+
 userInput.onkeyup = () =>{
     if (userInput.value == ''){
         btnInput.disabled = true;
@@ -40,9 +41,13 @@ btnInput.addEventListener('click', function(){
     removeList.innerHTML = `<i class="fas fa-minus-circle"></i>`;
     listTodo.appendChild(divElement);
 
+    const jumlahList = document.querySelectorAll('.list-todo .list');
+    const listNumber = document.querySelector('.footer span');
+
     // REMOVE BTN  LISTENER
     removeList.addEventListener('click', function(){
         divElement.remove();
+        listNumber.innerHTML = jumlahList.length -1;
     });
 
     // DONE BTN LISTENER
@@ -72,8 +77,7 @@ btnInput.addEventListener('click', function(){
     });
 
     // MENGHITUNG BANYAK LIST
-    const jumlahList = document.querySelectorAll('.list-todo .list');
-    const listNumber = document.querySelector('.footer span');
+    
     
     listNumber.innerHTML = jumlahList.length;
 });
