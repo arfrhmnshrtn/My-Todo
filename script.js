@@ -72,8 +72,3 @@ btnInput.addEventListener('click', function(){
         listNumber.innerHTML = 0;
     });
 });
-
-    
-
-
-
