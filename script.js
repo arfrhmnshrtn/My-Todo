@@ -2,8 +2,7 @@ const btnInput = document.querySelector('.input-todo button');
 const userInput = document.querySelector('.input-todo input');
 const listTodo = document.querySelector('.list-todo');
 
-
-
+// FALIDASI TOMBOL INPUT
 userInput.onkeyup = () =>{
     if (userInput.value == ''){
         btnInput.disabled = true;
@@ -12,6 +11,7 @@ userInput.onkeyup = () =>{
     }
 };
 
+// EVENT TOMBOL INPUT
 btnInput.addEventListener('click', function(){
     let userData = userInput.value;
 
@@ -24,8 +24,6 @@ btnInput.addEventListener('click', function(){
     liElement.classList.add('list-name');
     divElement.appendChild(liElement);
     liElement.innerHTML = userData;
-
-    
 
     // ADD DONE BTN
     const doneBtn = document.createElement('button');
@@ -44,6 +42,8 @@ btnInput.addEventListener('click', function(){
     const jumlahList = document.querySelectorAll('.list-todo .list');
     const listNumber = document.querySelector('.footer span');
 
+    listNumber.innerHTML = jumlahList.length;
+
     // REMOVE BTN  LISTENER
     removeList.addEventListener('click', function(){
         divElement.remove();
@@ -52,10 +52,6 @@ btnInput.addEventListener('click', function(){
 
     // DONE BTN LISTENER
     doneBtn.addEventListener('click', function(){
-        // liElement.style.textDecoration = 'line-through';
-        // liElement.style.opacity = '0.5';
-        // liElement.style.background = 'lightgreen';
-
         liElement.classList.toggle('active')
     });
 
@@ -75,11 +71,6 @@ btnInput.addEventListener('click', function(){
         divElement.remove();
         listNumber.innerHTML = 0;
     });
-
-    // MENGHITUNG BANYAK LIST
-    
-    
-    listNumber.innerHTML = jumlahList.length;
 });
 
     
