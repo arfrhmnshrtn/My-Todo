@@ -57,6 +57,9 @@ body{
 .input-todo button:hover{
     background: rgb(113, 206, 113);
 }
+.input-todo button:active{
+    font-size: 15px;
+}
 .list-todo{
     max-height: 260px;
     overflow: auto;
@@ -78,7 +81,6 @@ body{
 .list-todo .list:hover{
     background: rgb(212, 204, 204);
 }
-
 .list-todo li{
     flex: 1;
     list-style: none;
@@ -87,7 +89,6 @@ body{
     align-content: center;
     align-items: center;
 }
-
 .list-todo li.active{
     text-decoration: line-through;
     opacity: 0.3;
@@ -114,6 +115,9 @@ body{
 .list-todo .done-button:hover{
     background: rgb(114, 207, 114);
 }
+.list-todo .done-button:active{
+    font-size: 5px;
+}
 .list-todo .remove-button{
     background: salmon;
     color: white;
@@ -123,24 +127,29 @@ body{
 .list-todo .remove-button:hover{
     background: rgb(226, 107, 94);
 }
+.list-todo .remove-button:active{
+    font-size: 5px;
+}
 .footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 20px;
     margin: 5px 30px;
-}
-.footer p{
-    font-size: 15px;
 }
 .footer button{
     background: salmon;
     outline: none;
     border: none;
-    padding: 3px;
+    padding: 5px 50px;
     border-radius: 5px;
     color: white;
     cursor: pointer;
+    font-size: 15px;
+    transition: all 0.5s ease;
 }
 .footer button:hover{
     background: rgb(226, 107, 94);
+}
+.footer button:active{
+    font-size: 10px;
 }
